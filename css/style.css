@@ -1,0 +1,2722 @@
+@import url("https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000000;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #909090;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #606060;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h3 {
+  color: #fff;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+
+li {
+  list-style: none;
+}
+
+/* Utility */
+
+.logo {
+  display: none;
+}
+
+.l-heading {
+  color: #fff;
+  font-size: 5rem;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+}
+
+.m-heading {
+  color: #fff;
+  font-size: 3rem;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+}
+
+p {
+  color: white;
+}
+
+.showcase-h1_heading {
+  color: #fff;
+  font-size: 5rem;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+}
+
+.showcase-h3_heading {
+  padding-bottom: 0.5rem;
+  letter-spacing: 10px;
+  color: #fff;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+
+.modal-heading {
+  font-size: 2rem;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  padding-bottom: 0.5rem;
+}
+
+.sections {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  height: auto;
+  padding-top: 8rem;
+  flex: 0 1 auto;
+}
+
+.sections h3 {
+  font-weight: 600;
+}
+
+.sections ul li {
+  padding-bottom: 1rem;
+}
+
+.sections ul li a:hover {
+  text-decoration: underline;
+}
+
+.showcase-p {
+  font-size: 1.15rem;
+}
+
+.wrap .overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+#contents {
+  width: 100%;
+  height: auto;
+  padding: 4rem 3rem 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer {
+  width: 100%;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 3rem 1rem 3rem;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer .footer-text h3 {
+  padding: 1rem;
+  text-align: left;
+  color: white;
+  font-weight: 500;
+}
+
+#footer .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#footer .social-links i {
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+}
+
+.quick-facts {
+  color: #fff;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  height: auto;
+  padding-top: 8rem;
+  flex: 0 1 auto;
+}
+
+.quick-facts li:nth-child(even) {
+  padding-bottom: 1rem;
+}
+
+.TD-model {
+  margin-bottom: 1.5rem;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th {
+  padding: 0.8rem;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+td {
+  border: 1px solid #d2d2d2;
+  padding: 0.8rem;
+}
+
+/* Navbar */
+
+#navbar {
+  background: #000000;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  box-shadow: 0px 4px 2rem rgb(0 0 0 / 0.5);
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin: auto;
+}
+
+#navbar ul li {
+  list-style: none;
+  color: white;
+  padding: 0rem 1.5rem;
+  font-size: 1.25rem;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+}
+
+#navbar ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+#navbar ul li a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 1.5px;
+  width: 100%;
+  transform: scaleX(0);
+  background-color: white;
+  left: 0;
+  bottom: 8px;
+  transform-origin: center;
+  transition: 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  z-index: -1;
+}
+
+#navbar ul li a:hover::after,
+#navbar ul li a:hover::before {
+  transform: scaleX(1);
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  height: 850px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: url("../Resources/Solar_system.jpg") no-repeat center center/cover;
+  overflow: hidden;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 100%);
+  background: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 100%);
+  z-index: 0;
+}
+
+/* Primary Section */
+
+.showcase-wrap {
+  position: absolute;
+  height: 70%;
+  width: 90%;
+  margin: 0rem auto;
+  z-index: 4;
+}
+
+.primary {
+  text-align: center;
+  display: block;
+  max-width: 1100px;
+  padding: 4.5rem 0rem;
+  height: auto;
+  color: white;
+  margin: auto;
+}
+
+.primary p {
+  font-size: 1.15rem;
+}
+
+.scroll-wrap {
+  height: 3rem;
+  width: 1.5rem;
+  margin: 5rem auto 0rem auto;
+}
+
+.scroll-icon {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 1rem;
+}
+
+.scroll-icon_dot {
+  display: block;
+  position: absolute;
+  left: 50%;
+  background: #fff;
+  height: 0.5rem;
+  width: 0.5rem;
+  top: 0.6rem;
+  margin-left: -0.25rem;
+  border-radius: 50%;
+  transform-origin: top center;
+  backface-visibility: hidden;
+  animation: scroll 2s ease-out infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    transform: translateY(0.75em);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+#home-contents {
+  padding: 2rem 0rem 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paragraphs {
+  padding: 2rem 0rem 2rem 5rem;
+  color: white;
+  flex: 1;
+}
+
+.flex-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro-size {
+  display: block;
+  margin: auto;
+  flex: 2;
+}
+
+.orbits {
+  background: url("../Resources/Orbit.jpg") no-repeat center center/contain;
+  width: auto;
+  height: 900px;
+  flex: 1;
+  align-self: flex-end;
+}
+
+.orbits2 {
+  background: url("../Resources/Orbits 2.jpg") no-repeat center center/contain;
+  width: 100%;
+  height: 45vw;
+}
+
+.form-moons {
+  width: 90%;
+  height: auto;
+}
+
+/* Buttons */
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn a {
+  width: 205px;
+  padding: 0.75rem 1.5rem;
+  display: block;
+  color: white;
+}
+
+/* Explore Page */
+
+.page-anchor {
+  font-size: 1.25rem;
+  text-align: center;
+  border: 2px solid grey;
+  border-radius: 40px;
+}
+
+.page-anchor a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0.75rem 0rem;
+}
+
+.sun-wrap {
+  padding: 4rem 3.5rem 5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem 4rem;
+}
+
+.sun-wrap .sun-img {
+  position: relative;
+  background: url("../Resources/Sun.jpg") no-repeat center center/cover;
+  transition: 0.5s ease-out;
+  width: 100%;
+  height: 100%;
+}
+
+.overflow-image-wrapper {
+  width: 550px;
+  min-width: 550px;
+  height: 350px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 80px 10px rgba(255, 51, 0, 0.6);
+}
+
+.sun-wrap .sun-img:hover {
+  transform: scale(1.2);
+}
+
+.sun-wrap .sun-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 10px;
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(255, 51, 0, 0.6));
+  background-image: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(255, 51, 0, 0.6));
+}
+
+.sun-wrap .sun-info .sun-facts {
+  color: #fff;
+  line-height: 2;
+  top: 0;
+}
+
+.sun-wrap .sun-info .sun-facts li {
+  list-style: disc;
+  padding-left: 12px;
+}
+
+.sun-wrap .sun-info .sun-facts h3 {
+  font-size: 2.5rem;
+  padding-left: 12px;
+  font-weight: 600;
+}
+
+.sun-wrap .sun-info .explore-sun {
+  padding: 2rem 0rem 0rem 0.75rem;
+  max-width: 400px;
+}
+
+.sun-wrap .sun-info .explore-sun {
+  padding: 2rem 0rem;
+}
+
+.sun-wrap .sun-info .explore-sun .page-anchor:hover {
+  border: 2px solid transparent;
+  background: rgb(211, 42, 0);
+  transition: 0.35s ease-in-out;
+}
+
+/*  Planets */
+
+.explore-planets {
+  display: block;
+  margin: auto;
+}
+
+.explore-planets .title {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.wrap {
+  padding: 3rem 0rem;
+  margin: auto;
+  display: grid;
+  width: 100%;
+  gap: 2rem 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+  justify-content: center;
+}
+
+.wrap .mercury .mercury-shadow {
+  box-shadow: 0px 0px 150px 15px rgba(197, 192, 190, 0.5);
+}
+
+.wrap .mercury .mercury-img {
+  position: relative;
+  background: url("../Resources/Mercury.jpg") no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease-out;
+}
+
+.wrap .mercury .mercury-img::after {
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(197, 192, 190, 0.5));
+  background-image: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(197, 192, 190, 0.5));
+}
+
+.wrap .mercury .explore-mercury {
+  padding: 2rem 0rem;
+}
+
+.wrap .mercury .explore-mercury .page-anchor:hover {
+  transition: 0.35s ease-in-out;
+  background: rgba(197, 192, 190, 0.5);
+  border: 2px solid transparent;
+}
+
+.wrap .venus .venus-shadow {
+  box-shadow: 0px 0px 150px 15px rgba(227, 185, 144, 0.5);
+}
+
+.wrap .venus .venus-img {
+  position: relative;
+  background: url("../Resources/venus.jpg") no-repeat center center/cover;
+  transition: 0.5s ease-out;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap .venus .venus-img::after {
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(227, 185, 144, 0.5));
+  background-image: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(227, 185, 144, 0.5));
+}
+
+.wrap .venus .explore-venus {
+  padding: 2rem 0rem;
+}
+
+.wrap .venus .explore-venus .page-anchor:hover {
+  transition: 0.35s ease-in-out;
+  background: rgba(227, 185, 144, 0.5);
+  border: 2px solid transparent;
+}
+
+.wrap .earth .earth-shadow {
+  box-shadow: 0px 0px 150px 15px rgba(93, 147, 188, 0.5);
+}
+
+.wrap .earth .earth-img {
+  position: relative;
+  background: url("../Resources/Earth.jpg") no-repeat center center/cover;
+  transition: 0.5s ease-out;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap .earth .earth-img::after {
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(93, 147, 188, 0.5));
+  background-image: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(93, 147, 188, 0.5));
+}
+
+.wrap .earth .explore-earth {
+  padding: 2rem 0rem;
+}
+
+.wrap .earth .explore-earth .page-anchor:hover {
+  transition: 0.35s ease-in-out;
+  background: rgba(93, 147, 188, 0.5);
+  border: 2px solid transparent;
+}
+
+.wrap .mars .mars-shadow {
+  box-shadow: 0px 0px 150px 15px rgba(186, 112, 89, 0.5);
+}
+
+.wrap .mars .mars-img {
+  position: relative;
+  background: url("../Resources/Mars.jpg") no-repeat center center/cover;
+  transition: 0.5s ease-out;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap .mars .mars-img::after {
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(211, 123, 77, 0.5));
+  background-image: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(211, 123, 77, 0.5));
+}
+
+.wrap .mars .explore-mars {
+  padding: 2rem 0rem;
+}
+
+.wrap .mars .explore-mars .page-anchor:hover {
+  transition: 0.35s ease-in-out;
+  background: rgba(186, 112, 89, 0.5);
+  border: 2px solid transparent;
+}
+
+.wrap .jupiter .jupiter-shadow {
+  box-shadow: 0px 0px 150px 15px rgba(181, 148, 107, 0.5);
+}
+
+.wrap .jupiter .jupiter-img {
+  position: relative;
+  background: url("../Resources/Jupiter.jpg") no-repeat center center/cover;
+  transition: 0.5s ease-out;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap .jupiter .jupiter-img::after {
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(181, 148, 107, 0.5));
+  background-image: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(181, 148, 107, 0.5));
+}
+
+.wrap .jupiter .explore-jupiter {
+  padding: 2rem 0rem;
+}
+
+.wrap .jupiter .explore-jupiter .page-anchor:hover {
+  transition: 0.35s ease-in-out;
+  background: rgba(181, 148, 107, 0.5);
+  border: 2px solid transparent;
+}
+
+.wrap .saturn .saturn-shadow {
+  box-shadow: 0px 0px 150px 15px rgba(201, 163, 114, 0.5);
+}
+
+.wrap .saturn .saturn-img {
+  position: relative;
+  background: url("../Resources/Saturn.jpg") no-repeat center center/cover;
+  transition: 0.5s ease-out;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap .saturn .saturn-img::after {
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(201, 163, 114, 0.5));
+  background-image: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(201, 163, 114, 0.5));
+}
+
+.wrap .saturn .explore-saturn {
+  padding: 2rem 0rem;
+}
+
+.wrap .saturn .explore-saturn .page-anchor:hover {
+  transition: 0.35s ease-in-out;
+  background: rgba(201, 163, 114, 0.5);
+  border: 2px solid transparent;
+}
+
+.wrap .uranus .uranus-shadow {
+  box-shadow: 0px 0px 150px 15px rgba(158, 228, 230, 0.5);
+}
+
+.wrap .uranus .uranus-img {
+  position: relative;
+  background: url("../Resources/Uranus.jpg") no-repeat center center/cover;
+  transition: 0.5s ease-out;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap .uranus .uranus-img::after {
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(158, 228, 230, 0.5));
+  background-image: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(158, 228, 230, 0.5));
+}
+
+.wrap .uranus .explore-uranus {
+  padding: 2rem 0rem;
+}
+
+.wrap .uranus .explore-uranus .page-anchor:hover {
+  transition: 0.35s ease-in-out;
+  background: rgba(158, 228, 230, 0.5);
+  border: 2px solid transparent;
+}
+
+.wrap .neptune .neptune-shadow {
+  box-shadow: 0px 0px 150px 15px rgba(72, 119, 253, 0.5);
+}
+
+.wrap .neptune .neptune-img {
+  position: relative;
+  background: url("../Resources/Neptune.jpg") no-repeat center center/cover;
+  transition: 0.5s ease-out;
+  height: 100%;
+}
+
+.wrap .neptune .neptune-img::after {
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(72, 119, 253, 0.5));
+  background-image: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(72, 119, 253, 0.5));
+}
+
+.wrap .neptune .explore-neptune {
+  padding: 2rem 0rem;
+}
+
+.wrap .neptune .explore-neptune .page-anchor:hover {
+  transition: 0.35s ease-in-out;
+  background: rgba(72, 119, 253, 0.5);
+  border: 2px solid transparent;
+}
+
+.wrap .pluto .pluto-shadow {
+  box-shadow: 0px 0px 150px 15px rgba(121, 48, 40, 0.5);
+}
+
+.wrap .pluto .pluto-img {
+  position: relative;
+  background: url("../Resources/Pluto.jpg") no-repeat center center/cover;
+  transition: 0.5s ease-out;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap .pluto .pluto-img::after {
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(121, 48, 40, 0.5));
+  background-image: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(121, 48, 40, 0.5));
+}
+
+.wrap .pluto .explore-pluto {
+  padding: 2rem 0rem;
+}
+
+
+.wrap .pluto .explore-pluto .page-anchor:hover {
+  transition: 0.35s ease-in-out;
+  background: rgba(185, 81, 70, 0.5);
+  border: 2px solid transparent;
+}
+
+.wrap .overflow-wrapper {
+  height: 270px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Zoom */
+.wrap .zoom:hover {
+  transform: scale(1.2);
+}
+
+.responsiveHeight {
+  max-width: 1530px;
+  margin: auto;
+}
+
+/*  Explore SUN */
+
+.sun-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 760px;
+  width: 100%;
+  background: url(../Resources/Sun_showcase.jpg) no-repeat center center/cover;
+  overflow: hidden;
+}
+
+.sun-showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(162, 23, 8, 0.6),
+      rgba(0, 0, 0, 0.6));
+  background: -webkit-linear-gradient(270deg,
+      rgba(162, 23, 8, 0.6),
+      rgba(0, 0, 0, 0.6));
+  mix-blend-mode: soft-light;
+  z-index: 0;
+}
+
+.sun-showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  background: -webkit-linear-gradient(270deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  z-index: 1;
+}
+
+.showcase_wrap {
+  height: 420px;
+  width: 90%;
+  margin: 0rem auto;
+  display: block;
+  z-index: 4;
+}
+
+.sun-showcase .sun-showcase_info {
+  text-align: center;
+  max-width: 1100px;
+  margin: auto;
+  height: auto;
+}
+
+.quickFacts {
+  display: none;
+}
+
+.info_wrap {
+  padding: 2rem 5rem;
+  overflow: hidden;
+  flex: 1;
+}
+
+.earth-sun_scale {
+  background: url("../Resources/Earth-sun_scale.jpeg") no-repeat center center/contain;
+  width: 100%;
+  aspect-ratio: 1.6;
+  margin: auto;
+}
+
+.planets-sun_scale {
+  background: url("../Resources/Planets-sun_scale.jpg") no-repeat center center/contain;
+  width: 100%;
+  aspect-ratio: 1.8;
+  margin: auto;
+}
+
+.sun-regions {
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "Gilroy", sans-serif;
+  border: 2px dotted white;
+}
+
+.sun-structure {
+  background: url("../Resources/Sun-structure.jpg") no-repeat center center/contain;
+  width: 100%;
+  aspect-ratio: 1.5;
+  margin: auto;
+}
+
+/* Explore Mercury */
+
+.mercury-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 760px;
+  width: 100%;
+  overflow: hidden;
+  background: url("../Resources/Mercury_showcase.jpg") no-repeat center center/cover;
+}
+
+.mercury-showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(110, 110, 110, 0.5),
+      rgba(0, 0, 0, 0.6));
+  background: -webkit-linear-gradient(270deg,
+      rgba(110, 110, 110, 0.5),
+      rgba(0, 0, 0, 0.6));
+  mix-blend-mode: color-dodge;
+  z-index: 0;
+}
+
+.mercury-showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  background: -webkit-linear-gradient(270deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  z-index: 1;
+}
+
+.mercury-showcase .mercury-showcase_wrap {
+  position: absolute;
+  height: 420px;
+  z-index: 4;
+}
+
+.mercury-showcase .mercury-showcase_info {
+  text-align: center;
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+  height: auto;
+}
+
+.messenger {
+  background: url("../Resources/Mercury Messenger.jpg") no-repeat center center/contain;
+  margin: auto;
+}
+
+.MercuryStructure {
+  background: url("../Resources/internal structure of mercury.jpg") no-repeat center center/contain;
+  width: 750px;
+  height: 500px;
+  margin: auto;
+}
+
+.quickFacts fieldset h3,
+.quick-facts h3 {
+  font-weight: 600;
+}
+
+fieldset.mercury-temperature {
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.mercury-temperature .hot_or_cold {
+  padding: 0rem 0.5rem;
+  font-size: 1.15rem;
+  font-family: "Gilroy", sans-serif;
+  color: #fff;
+}
+
+/* Explore Venus  */
+
+.venus-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 760px;
+  width: 100%;
+  overflow: hidden;
+  background: url("../Resources/Venus_showcase.jpg") no-repeat center center/cover;
+}
+
+.venus-showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(160, 134, 98, 0.5),
+      rgba(0, 0, 0, 0.6));
+  background: -webkit-linear-gradient(270deg,
+      rgba(160, 134, 98, 0.5),
+      rgba(0, 0, 0, 0.6));
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+.venus-showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  background: -webkit-linear-gradient(270deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  z-index: 1;
+}
+
+.venus-showcase .venus-showcase_wrap {
+  position: absolute;
+  height: 420px;
+  z-index: 4;
+}
+
+.venus-showcase .venus-showcase_info {
+  text-align: center;
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+  height: auto;
+}
+
+.mariner2 {
+  background: url("../Resources/Venus Mariner2.jpg") no-repeat center center/contain;
+  margin: auto;
+}
+
+.VenusStructure {
+  background: url("../Resources/Venus Structure.jpg") no-repeat center center/contain;
+  width: 600px;
+  height: 450px;
+  margin: auto;
+}
+
+/* Explore Earth */
+
+.earth-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 760px;
+  width: 100%;
+  overflow: hidden;
+  background: url("../Resources/Earth_showcase.jpg") no-repeat center center/cover;
+}
+
+.earth-showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2) 60%);
+  background: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  z-index: 0;
+}
+
+.earth-showcase .earth-showcase_wrap {
+  position: absolute;
+  height: 420px;
+  z-index: 4;
+}
+
+.earth-showcase .earth-showcase_info {
+  text-align: center;
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+  height: auto;
+}
+
+.galileo {
+  background: url("../Resources/Earth Galileo.jpg") no-repeat center center/contain;
+  margin: auto;
+}
+
+.EarthStructure {
+  background: url("../Resources/Earth Structure.jpg") no-repeat center center/contain;
+  width: 100%;
+  aspect-ratio: 1.5;
+  margin: auto;
+}
+
+.moon-wrap {
+  padding: 4rem 2rem;
+}
+
+.moon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.moon-img {
+  background: url("../Resources/Moon.jpg") no-repeat center center/contain;
+  width: 100%;
+  height: 22vw;
+}
+
+.moon-info {
+  padding: 2rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.moon-info h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.moon-info a {
+  display: block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.moon-info a:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Explore Moon */
+
+.moon-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 760px;
+  width: 100%;
+  overflow: hidden;
+  background: url("../Resources/Moon_showcase.jpg") no-repeat center center/cover;
+}
+
+.moon-showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2) 60%);
+  background: -webkit-linear-gradient(270deg,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  z-index: 0;
+}
+
+.moon-showcase .moon-showcase_wrap {
+  position: absolute;
+  height: 420px;
+  z-index: 4;
+}
+
+.moon-showcase .moon-showcase_info {
+  text-align: center;
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+  height: auto;
+}
+
+/* Explore Mars */
+
+.mars-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 760px;
+  width: 100%;
+  overflow: hidden;
+  background: url("../Resources/Mars_showcase.jpg") no-repeat center center/cover;
+}
+
+.mars-showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(210, 136, 99, 0.5),
+      rgba(0, 0, 0, 0.6));
+  background: -webkit-linear-gradient(270deg,
+      rgba(210, 136, 99, 0.5),
+      rgba(0, 0, 0, 0.6));
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+.mars-showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  background: -webkit-linear-gradient(270deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  z-index: 1;
+}
+
+.mars-showcase .mars-showcase_wrap {
+  position: absolute;
+  height: 420px;
+  z-index: 4;
+}
+
+.mars-showcase .mars-showcase_info {
+  text-align: center;
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+  height: auto;
+}
+
+.mars-exploration {
+  color: #fff;
+}
+
+.mariner9 {
+  background: url("../Resources/Mars Mariner9.jpg") no-repeat center center/contain;
+  margin: auto;
+}
+
+.mars-exploration a {
+  color: #43aaed;
+}
+
+.MarsStructure {
+  background: url("../Resources/Mars Structure.jpg") no-repeat center center/contain;
+  width: 800px;
+  height: 553px;
+  margin: auto;
+}
+
+.MarsLandscape {
+  background: url("https://solarsystem.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb2hhIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--05eba952db06452785ed7b86dc3954a9dc0fdada/PIA22313-home.jpg?disposition=attachment") no-repeat center center/ cover;
+  margin: auto;
+}
+
+/* Phobos */
+
+.modalbtnPhobos {
+  border: none;
+  background-color: #43aaed;
+  box-shadow: 2px 2px 0px 0px rgb(61, 61, 61);
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0rem 0.25rem;
+  margin: 0rem 0.1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+#phobos_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(210, 136, 99, 0.502);
+  display: none;
+  animation: popup 0.5s ease-in-out;
+  z-index: 8;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#phobos_wrap {
+  width: 800px;
+  max-width: 100%;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.4);
+  margin: 10% auto 4rem auto;
+}
+
+.phobos-img {
+  position: relative;
+  background: url("../Resources/Phobos.jpg") no-repeat center center/cover;
+  width: 800px;
+  height: 540px;
+  max-width: 100%;
+}
+
+.phobos-img::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(180deg,
+      rgba(210, 136, 99, 0.5),
+      rgba(0, 0, 0, 0.5));
+  background: -webkit-linear-gradient(270deg,
+      rgba(210, 136, 99, 0.5),
+      rgba(0, 0, 0, 0.5));
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.phobos-img::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 40%);
+  background: -webkit-linear-gradient(270deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 40%);
+  z-index: 2;
+}
+
+.close_btn_wrap {
+  position: absolute;
+  text-align: right;
+  z-index: 2;
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.closebtnPhobos {
+  transition: 0.25s ease-in-out;
+  vertical-align: middle;
+  opacity: 0.8;
+  width: 40px;
+  height: 40px;
+}
+
+.closebtnPhobos:hover {
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+.phobos-img h1 {
+  position: absolute;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+.phobos_info_wrap {
+  padding: 3rem;
+}
+
+/* Deimos */
+
+.modalbtnDeimos {
+  border: none;
+  background-color: #43aaed;
+  box-shadow: 2px 2px 0px 0px rgb(61, 61, 61);
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0rem 0.25rem;
+  margin: 0rem 0.1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+#deimos_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(210, 136, 99, 0.502);
+  display: none;
+  animation: popup 0.5s ease-in-out;
+  z-index: 8;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#deimos_wrap {
+  width: 800px;
+  max-width: 100%;
+  box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
+  background-color: rgb(0, 0, 0);
+  margin: 10% auto 4rem auto;
+}
+
+.deimos-img {
+  position: relative;
+  background: url("../Resources/Deimos.jpg") no-repeat center center/cover;
+  width: 800px;
+  height: 540px;
+  max-width: 100%;
+}
+
+.deimos-img::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,
+      rgba(210, 136, 99, 0.502) rgba(0, 0, 0, 0.6));
+  background: -webkit-linear-gradient(270deg,
+      rgba(210, 136, 99, 0.502) rgba(0, 0, 0, 0.6));
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.deimos-img::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.5) 40%);
+  background: -webkit-linear-gradient(270deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.5) 40%);
+  mix-blend-mode: multiply;
+  z-index: 2;
+}
+
+.closebtnDeimos {
+  transition: 0.25s ease-in-out;
+  vertical-align: middle;
+  opacity: 0.8;
+  width: 40px;
+  height: 40px;
+}
+
+.closebtnDeimos:hover {
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+.deimos-img h1 {
+  position: absolute;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+.deimos_info_wrap {
+  padding: 3rem;
+}
+
+/* Exploren Jupiter */
+
+.jupiter-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 760px;
+  width: 100%;
+  overflow: hidden;
+  background: url("../Resources/Jupiter_showcase.jpg") no-repeat center center/cover;
+}
+
+.jupiter-showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(210, 136, 99, 0.5),
+      rgba(0, 0, 0, 0.6));
+  background: -webkit-linear-gradient(270deg,
+      rgba(210, 136, 99, 0.5),
+      rgba(0, 0, 0, 0.6));
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+.jupiter-showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  background: -webkit-linear-gradient(270deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  z-index: 1;
+}
+
+.jupiter-showcase .jupiter-showcase_wrap {
+  position: absolute;
+  height: 420px;
+  z-index: 4;
+}
+
+.jupiter-showcase .jupiter-showcase_info {
+  text-align: center;
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+  height: auto;
+}
+
+fieldset.jupiter-facts {
+  padding: 1rem 3rem;
+  color: #fff;
+}
+
+fieldset.jupiter-facts ul li {
+  list-style: disc;
+  list-style-position: outside;
+}
+
+fieldset .jupiter-features {
+  padding: 0rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: "Gilroy", sans-serif;
+}
+
+.jupiter-exploration a {
+  color: #43aaed;
+}
+
+.juno {
+  background: url("../Resources/Jupiter Juno.jpg") no-repeat center center/contain;
+  margin: auto;
+}
+
+.europa {
+  background: url("https://live.staticflickr.com/65535/50088202822_ea7291b85c_k_d.jpg") no-repeat center center/contain;
+  width: 90%;
+  height: 31vw;
+  margin: auto;
+}
+
+.europacaption {
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 10px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.jupiterMoons {
+  background: url("https://live.staticflickr.com/8823/29253020675_e4c0321052_k_d.jpg") no-repeat center center/contain;
+  width: 90%;
+  height: 32vw;
+  margin: auto;
+}
+
+.s-img {
+  background: url("../Resources/Jupiter_structure.png") no-repeat center center/contain;
+  width: 100%;
+  height: 32vw;
+  margin: auto;
+}
+
+/* Explore Saturn */
+
+.saturn-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 760px;
+  width: 100%;
+  overflow: hidden;
+  background: url("../Resources/Saturn_showcase.jpg") no-repeat center center/cover;
+}
+
+.saturn-showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(201, 163, 114, 0.5),
+      rgba(0, 0, 0, 0.6));
+  background: -webkit-linear-gradient(270deg,
+      rgba(201, 163, 114, 0.5),
+      rgba(0, 0, 0, 0.6));
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+.saturn-showcase .saturn-showcase_wrap {
+  position: absolute;
+  height: 420px;
+  z-index: 4;
+}
+
+.saturn-showcase .saturn-showcase_info {
+  text-align: center;
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+  height: auto;
+}
+
+.cassini {
+  background: url("../Resources/Saturn Cassini.jpg") no-repeat center center/contain;
+  margin: auto;
+}
+
+.SaturnStructure {
+  background: url("../Resources/Saturn structure.jpg") no-repeat center center/contain;
+  width: 100%;
+  height: 42vw;
+  margin: auto;
+}
+
+.titan {
+  background: url("../Resources/Titan.jpg") no-repeat center center/cover;
+  width: 90%;
+  height: 32vw;
+  margin: auto;
+}
+
+.enceladus {
+  background: url("https://live.staticflickr.com/4783/40942341431_2c3b4ebfa4_o_d.jpg") no-repeat center center/contain;
+  width: 60%;
+  height: 39vw;
+  margin: auto;
+}
+
+.enceladuscaption {
+  color: white;
+  margin-top: 1rem;
+  font-size: 2rem;
+  letter-spacing: 10px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Explore Uranus */
+
+.uranus-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 760px;
+  width: 100%;
+  overflow: hidden;
+  background: url("../Resources/Uranus_showcase.jpg") no-repeat center center/cover;
+}
+
+.uranus-showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(122, 175, 177, 0.5),
+      rgba(0, 0, 0, 0.6));
+  background: -webkit-linear-gradient(270deg,
+      rgba(122, 175, 177, 0.5),
+      rgba(0, 0, 0, 0.6));
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+.uranus-showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  background: -webkit-linear-gradient(270deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2) 60%);
+  z-index: 1;
+}
+
+.uranus-showcase .uranus-showcase_wrap {
+  position: absolute;
+  height: 420px;
+  z-index: 4;
+}
+
+.uranus-showcase .uranus-showcase_info {
+  text-align: center;
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+  height: auto;
+}
+
+.voyager2 {
+  background: url("../Resources/Uranus Voyager.jpg") no-repeat center center/contain;
+  margin: auto;
+}
+
+.UranusStructure {
+  background: url("../Resources/Uranus structure.jpg") no-repeat center center/contain;
+  width: 100%;
+  height: 42vw;
+  margin: auto;
+}
+
+/* Explore Neptune */
+
+.neptune-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 760px;
+  width: 100%;
+  overflow: hidden;
+  background: url("../Resources/Neptune_showcase.jpg") no-repeat center center/cover;
+}
+
+.neptune-showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(59, 82, 145, 0.5),
+      rgba(0, 0, 0, 0.6));
+  background: -webkit-linear-gradient(270deg,
+      rgba(59, 82, 145, 0.5),
+      rgba(0, 0, 0, 0.6));
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+.neptune-showcase .neptune-showcase_wrap {
+  position: absolute;
+  height: 420px;
+  z-index: 4;
+}
+
+.neptune-showcase .neptune-showcase_info {
+  text-align: center;
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+  height: auto;
+}
+
+.why_so_blue {
+  color: #fff;
+  padding: 0.5rem 1.4rem 1.25rem 1.4rem;
+}
+
+.voyager2neptune {
+  background: url("../Resources/Neptune Voyager.jpg") no-repeat center center/contain;
+  margin: auto;
+}
+
+.NeptuneStructure {
+  background: url("../Resources/Neptune structure.jpg") no-repeat center center/contain;
+  width: 100%;
+  height: 43vw;
+  margin: auto;
+}
+
+/* Explore Pluto */
+
+.pluto-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 760px;
+  width: 100%;
+  overflow: hidden;
+  background: url("../Resources/Pluto_showcase.jpg") no-repeat center center/cover;
+}
+
+.pluto-showcase .pluto-showcase_wrap {
+  position: absolute;
+  height: 420px;
+  z-index: 4;
+}
+
+.pluto-showcase .pluto-showcase_info {
+  text-align: center;
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+  height: auto;
+}
+
+.newhorizons {
+  background: url("../Resources/Pluto New Horizons.jpg") no-repeat center center/contain;
+  margin: auto;
+}
+
+.responsiveAspect {
+  width: 100%;
+  aspect-ratio: 2;
+}
+
+fieldset legend h3 {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+}
+
+/* Gallery */
+
+.gallery-wrap {
+  padding: 4rem 0rem;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  gap: 4rem;
+  justify-content: center;
+}
+
+/* Sun Gallery */
+
+.SunGallery {
+  background: url("../Resources/Sun_gallery.jpg") no-repeat center center;
+}
+
+.SunGallery::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.SunGallery::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -2;
+}
+
+.gradientsun {
+  background-image: linear-gradient(0deg,
+      rgba(222, 164, 91, 0.5),
+      rgba(0, 0, 0, 0.2));
+  background-image: -webkit-linear-gradient(90deg,
+      rgba(222, 164, 91, 0.5),
+      rgba(0, 0, 0, 0.2));
+}
+
+/* Mercury Gallery */
+
+.MercuryGallery {
+  background: url("../Resources/Mercury_gallery.jpg") no-repeat center center;
+}
+
+.MercuryGallery::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.MercuryGallery::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -2;
+}
+
+.gradientmercury {
+  background-image: linear-gradient(0deg,
+      rgba(143, 139, 129, 0.5),
+      rgba(0, 0, 0, 0.2));
+  background-image: -webkit-linear-gradient(90deg,
+      rgba(143, 139, 129, 0.5),
+      rgba(0, 0, 0, 0.2));
+}
+
+/* Venus Gallery */
+
+.VenusGallery {
+  background: url("../Resources/Venus_gallery.jpg") no-repeat center center;
+}
+
+.VenusGallery::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.VenusGallery::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -2;
+}
+
+.gradientvenus {
+  background-image: linear-gradient(0deg,
+      rgba(233, 196, 163, 0.5),
+      rgba(0, 0, 0, 0.2));
+  background-image: -webkit-linear-gradient(90deg,
+      rgba(233, 196, 163, 0.5),
+      rgba(0, 0, 0, 0.2));
+}
+
+/* Earth Gallery */
+
+.EarthGallery {
+  background: url("../Resources/Earth_gallery.jpg") no-repeat center center;
+}
+
+.EarthGallery::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.EarthGallery::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -2;
+}
+
+.gradientearth {
+  background-image: linear-gradient(0deg,
+      rgba(110, 151, 179, 0.5),
+      rgba(0, 0, 0, 0.2));
+  background-image: -webkit-linear-gradient(90deg,
+      rgba(110, 151, 179, 0.5),
+      rgba(0, 0, 0, 0.2));
+}
+
+/* Mars Gallery */
+
+.MarsGallery {
+  background: url("../Resources/Mars_gallery.jpg") no-repeat center center;
+}
+
+.MarsGallery::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.MarsGallery::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -2;
+}
+
+.gradientmars {
+  background-image: linear-gradient(0deg,
+      rgba(191, 138, 68, 0.5),
+      rgba(0, 0, 0, 0.2));
+  background-image: -webkit-linear-gradient(90deg,
+      rgba(191, 138, 68, 0.5),
+      rgba(0, 0, 0, 0.2));
+}
+
+/* Jupiter Gallery */
+
+.JupiterGallery {
+  background: url("../Resources/Jupiter_gallery.jpg") no-repeat center center;
+}
+
+.JupiterGallery::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.JupiterGallery::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -2;
+}
+
+.gradientjupiter {
+  background-image: linear-gradient(0deg,
+      rgba(198, 145, 108, 0.5),
+      rgba(0, 0, 0, 0.2));
+  background-image: -webkit-linear-gradient(90deg,
+      rgba(198, 145, 108, 0.5),
+      rgba(0, 0, 0, 0.2));
+}
+
+/* Saturn Gallery */
+
+.SaturnGallery {
+  background: url("../Resources/Saturn_gallery.jpg") no-repeat center center;
+}
+
+.SaturnGallery::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.SaturnGallery::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -2;
+}
+
+.gradientsaturn {
+  background-image: linear-gradient(0deg,
+      rgba(198, 145, 108, 0.5),
+      rgba(0, 0, 0, 0.2));
+  background-image: -webkit-linear-gradient(90deg,
+      rgba(198, 145, 108, 0.5),
+      rgba(0, 0, 0, 0.2));
+}
+
+/* Uranus Gallery */
+
+.UranusGallery {
+  background: url("../Resources/Uranus_gallery.jpg") no-repeat center center;
+}
+
+.UranusGallery::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.UranusGallery::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -2;
+}
+
+.gradienturanus {
+  background-image: linear-gradient(0deg,
+      rgba(158, 228, 230, 0.5),
+      rgba(0, 0, 0, 0.2));
+  background-image: -webkit-linear-gradient(90deg,
+      rgba(158, 228, 230, 0.5),
+      rgba(0, 0, 0, 0.2));
+}
+
+/* Neptune Gallery */
+
+.NeptuneGallery {
+  background: url("../Resources/Neptune_gallery.jpg") no-repeat center center;
+}
+
+.NeptuneGallery::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.NeptuneGallery::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -2;
+}
+
+.gradientneptune {
+  background-image: linear-gradient(0deg,
+      rgba(59, 82, 145, 0.5),
+      rgba(0, 0, 0, 0.2));
+  background-image: -webkit-linear-gradient(90deg,
+      rgba(59, 82, 145, 0.5),
+      rgba(0, 0, 0, 0.2));
+}
+
+/* Pluto Gallery */
+
+.PlutoGallery {
+  background: url("../Resources/Pluto_gallery.jpg") no-repeat center center;
+}
+
+.PlutoGallery::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.PlutoGallery::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -2;
+}
+
+.gradientpluto {
+  background-image: linear-gradient(0deg,
+      rgba(185, 81, 70, 0.5),
+      rgba(0, 0, 0, 0.2));
+  background-image: -webkit-linear-gradient(90deg,
+      rgba(185, 81, 70, 0.5),
+      rgba(0, 0, 0, 0.2));
+}
+
+/* Moon Gallery */
+
+.MoonGallery {
+  background: url("../Resources/Moon_gallery.jpg") no-repeat center center;
+}
+
+.MoonGallery::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.MoonGallery::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -2;
+}
+
+.gradientmoon {
+  background-image: linear-gradient(0deg,
+      rgba(66, 66, 66, 0.5),
+      rgba(0, 0, 0, 0.2));
+  background-image: -webkit-linear-gradient(90deg,
+      rgba(66, 66, 66, 0.5),
+      rgba(0, 0, 0, 0.2));
+}
+
+.galleryZoom {
+  position: relative;
+  background-size: 100%;
+  width: 300px;
+  height: 300px;
+  transition: 0.5s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.galleryZoom:hover {
+  transform: translateY(-0.75rem);
+  background-size: 130%;
+}
+
+.gallerylinks {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.25s ease-out;
+}
+
+.gallerylinks:hover {
+  opacity: 1;
+}
+
+.gallerylinks a {
+  font-size: 1.4rem;
+  font-family: "General Sans", sans-serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sun Gallery Page */
+
+.GalleryWrapSun {
+  grid-template-rows: repeat(9, minmax(400px, 400px));
+  grid-template-areas:
+    "img9 img9 img9 img9 img9 img9"
+    "img9 img9 img9 img9 img9 img9"
+    "img1 img1 img2 img2 img3 img3"
+    "img4 img4 img5 img5 img6 img6"
+    "img7 img7 img7 img7 img8 img8"
+    "img11 img11 img11 img11 img11 img11"
+    "img11 img11 img11 img11 img11 img11"
+    "img10 img10 img10 img10 img10 img10"
+    "img10 img10 img10 img10 img10 img10";
+}
+
+/* Mercury Gallery Page */
+
+.GalleryWrapMercury {
+  grid-template-rows: repeat(5, minmax(350px, 350px));
+  grid-template-areas:
+    "img1 img1 img1 img3 img3 img3"
+    "img1 img1 img1 img3 img3 img3"
+    "img2 img2 img2 img2 img2 img2"
+    "img2 img2 img2 img2 img2 img2"
+    "img4 img4 img5 img5 img6 img6";
+}
+
+/* Venus Gallery Page */
+
+.GalleryWrapVenus {
+  grid-template-rows: repeat(5, minmax(400px, 400px));
+  grid-template-areas:
+    "img1 img1 img2 img2 img3 img3"
+    "img4 img4 img6 img6 img6 img6 "
+    "img5 img5 img5 img5 img5 img5"
+    "img5 img5 img5 img5 img5 img5"
+    ". img7 img7 img8 img8  .";
+}
+
+/* Earth Gallery Page */
+
+.GalleryWrapEarth {
+  grid-template-rows: repeat(19, minmax(350px, 350px));
+  grid-template-areas:
+    "img1 img1 img1 img1 img1 img1"
+    "img1 img1 img1 img1 img1 img1"
+    "img2 img2 img2 img2 img2 img2"
+    "img2 img2 img2 img2 img2 img2"
+    "img3 img3 img3 img3 img3 img3"
+    "img3 img3 img3 img3 img3 img3"
+    "img4 img4 img4 img4 img4 img4"
+    "img4 img4 img4 img4 img4 img4"
+    "img5 img5 img5 img5 img5 img5"
+    "img5 img5 img5 img5 img5 img5"
+    "img6 img6 img6 img7 img7 img7"
+    "img8 img8 img8 img8 img8 img8"
+    "img8 img8 img8 img8 img8 img8"
+    "img9 img9 img9 img9 img10 img10"
+    "img11 img11 img11 img11 img11 img11"
+    "img11 img11 img11 img11 img11 img11"
+    "img12 img12 img12 img12 img12 img12"
+    "img12 img12 img12 img12 img12 img12"
+    "img13 img13 img13 img14 img14 img14";
+}
+
+/* Mars Gallery Page */
+
+.GalleryWrapMars {
+  grid-template-rows: repeat(19, minmax(350px, 350px));
+  grid-template-areas:
+    "img1 img1 img1 img1 img1 img1"
+    "img1 img1 img1 img1 img1 img1"
+    "img2 img2 img2 img2 img2 img2"
+    "img2 img2 img2 img2 img2 img2"
+    "img3 img3 img3 img3 img3 img3"
+    "img3 img3 img3 img3 img3 img3"
+    "img4 img4 img5 img5 img6 img6"
+    "img7 img7 img7 img7 img7 img7"
+    "img7 img7 img7 img7 img7 img7"
+    "img8 img8 img8 img8 img8 img8"
+    "img8 img8 img8 img8 img8 img8"
+    "img9 img9 img9 img9 img9 img9"
+    "img9 img9 img9 img9 img9 img9"
+    "img10 img10 img10 img10 img10 img10"
+    "img10 img10 img10 img10 img10 img10"
+    "img11 img11 img11 img11 img11 img11"
+    "img11 img11 img11 img11 img11 img11"
+    "img12 img12 img12 img13 img13 img13"
+    "img14 img14 img14 img15 img15 img15";
+}
+
+/* Jupiter Gallery Page */
+
+.GalleryWrapJupiter {
+  grid-template-rows: repeat(14, minmax(350px, 350px));
+  grid-template-areas:
+    "img1 img1 img1 img1 img1 img1"
+    "img1 img1 img1 img1 img1 img1"
+    "img2 img2 img2 img2 img2 img2"
+    "img2 img2 img2 img2 img2 img2"
+    "img3 img3 img3 img3 img3 img3"
+    "img3 img3 img3 img3 img3 img3"
+    "img4 img4 img5 img5 img6 img6"
+    "img7 img7 img7 img7 img7 img7"
+    "img7 img7 img7 img7 img7 img7"
+    "img8 img8 img8 img9 img9 img9"
+    "img10 img10 img10 img11 img11 img11"
+    "img12 img12 img12 img13 img13 img13"
+    "img14 img14 img14 img14 img14 img14"
+    "img14 img14 img14 img14 img14 img14";
+}
+
+/* Saturn Gallery Page */
+
+.GalleryWrapSaturn {
+  grid-template-rows: repeat(12, minmax(350px, 350px));
+  grid-template-areas:
+    "img1 img1 img1 img1 img1 img1"
+    "img1 img1 img1 img1 img1 img1"
+    "img2 img2 img2 img2 img2 img2"
+    "img2 img2 img2 img2 img2 img2"
+    "img3 img3 img3 img3 img3 img3"
+    "img3 img3 img3 img3 img3 img3"
+    "img4 img4 img5 img5 img6 img6"
+    "img7 img7 img7 img7 img7 img7"
+    "img7 img7 img7 img7 img7 img7"
+    "img8 img8 img8 img9 img9 img9"
+    "img10 img10 img10 img10 img10 img10"
+    "img11 img11 img12 img12 img13 img13";
+}
+
+/* Uranus Gallery Page */
+
+.GalleryWrapUranus {
+  grid-template-rows: repeat(4, minmax(350px, 350px));
+  grid-template-areas:
+    "img1 img1 img1 img1 img1 img1"
+    "img1 img1 img1 img1 img1 img1"
+    "img2 img2 img3 img3 img4 img4"
+    "img5 img5 img6 img6 img7 img7";
+}
+
+/* Neptune Gallery Page */
+
+.GalleryWrapNeptune {
+  grid-template-rows: repeat(4, minmax(350px, 350px));
+  grid-template-areas:
+    "img1 img1 img1 img1 img1 img1"
+    "img1 img1 img1 img1 img1 img1"
+    "img2 img2 img3 img3 img4 img4"
+    "img5 img5 img6 img6 img7 img7";
+}
+
+/* Pluto Gallery Page */
+
+.GalleryWrapPluto {
+  grid-template-rows: repeat(6, minmax(350px, 350px));
+  grid-template-areas:
+    "img1 img1 img1 img1 img1 img1"
+    "img1 img1 img1 img1 img1 img1"
+    "img2 img2 img2 img3 img3 img3"
+    "img4 img4 img4 img5 img5 img5"
+    "img6 img6 img6 img6 img6 img6"
+    "img6 img6 img6 img6 img6 img6";
+}
+
+/* Moon Gallery Page */
+
+.GalleryWrapMoon {
+  grid-template-rows: repeat(11, minmax(350px, 350px));
+  grid-template-areas:
+    "img1 img1 img1 img1 img1 img1"
+    "img1 img1 img1 img1 img1 img1"
+    "img2 img2 img2 img2 img2 img2"
+    "img2 img2 img2 img2 img2 img2"
+    "img3 img3 img3 img3 img3 img3"
+    "img3 img3 img3 img3 img3 img3"
+    "img4 img4 img5 img5 img6 img6"
+    "img7 img7 img7 img7 img7 img7"
+    "img7 img7 img7 img7 img7 img7"
+    "img8 img8 img8 img9 img9 img9"
+    "img10 img10 img10 img11 img11 img11";
+}
+
+/* Grid Properties */
+
+.gridprops {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(200px, 200px));
+  grid-auto-flow: dense;
+  width: 85%;
+  margin: auto;
+  gap: 1rem;
+  padding: 4rem 0rem;
+  justify-content: center;
+}
+
+.gridprops>div {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  filter: brightness(90%);
+  transform: scale(1);
+  transition: 0.5s ease-out;
+}
+
+.gridprops>div:hover {
+  transform: scale(0.98);
+  filter: brightness(100%);
+}
+
+.gridprops>div>img {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+}
+
+.gridprops>div>video {
+  object-fit: cover;
+}
+
+/* About */
+
+.aboutWrap {
+  width: 60%;
+  margin: auto;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.creditsWrap {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 2rem;
+  color: white;
+}
+
+.credits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.credits>div {
+  text-align: center;
+  padding: 2rem;
+}
+
+.fixwrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 64px);
+}
+
+.hamwrap {
+  position: absolute;
+  top: 0rem;
+  right: 0px;
+  padding: 1rem;
+  height: 55px;
+  width: 70px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  display: none;
+  cursor: pointer;
+}
